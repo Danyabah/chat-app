@@ -1,0 +1,947 @@
+@mixin mobile {
+  @media screen and (max-width: 590px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+:root {
+  --hue-color: 0;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+html,
+body {
+  @include mobile {
+    overflow-x: hidden;
+  }
+}
+.home.orange {
+  --hue-color: 20;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.green {
+  --hue-color: 140;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.beer {
+  --hue-color: 170;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.blue {
+  --hue-color: 200;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.purp {
+  --hue-color: 260;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.lpurp {
+  --hue-color: 290;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.pink {
+  --hue-color: 320;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.home.black {
+  --hue-color: 0;
+  --light-color: hsl(var(--hue-color), 0%, 58%);
+  --deep-color: hsl(var(--hue-color), 0%, 33%);
+  --cold-color: hsl(var(--hue-color), 0%, 26%);
+  --lighter-color: hsl(var(--hue-color), 0%, 50%);
+  --dark-color: hsl(var(--hue-color), 0%, 22%);
+  --darker-color: hsl(var(--hue-color), 0%, 10%);
+  --white-color: hsl(var(--hue-color), 0%, 80%);
+  --input-color: hsl(var(--hue-color), 0%, 26%);
+}
+
+.formContainer.orange {
+  --hue-color: 20;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.green {
+  --hue-color: 140;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.beer {
+  --hue-color: 170;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.blue {
+  --hue-color: 200;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.purp {
+  --hue-color: 260;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.lpurp {
+  --hue-color: 290;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.pink {
+  --hue-color: 320;
+  --light-color: hsl(var(--hue-color), 92%, 85%);
+  --deep-color: hsl(var(--hue-color), 36%, 39%);
+  --cold-color: hsl(var(--hue-color), 45%, 26%);
+  --lighter-color: hsl(var(--hue-color), 31%, 50%);
+  --dark-color: hsl(var(--hue-color), 45%, 26%);
+  --darker-color: hsl(var(--hue-color), 57%, 53%);
+  --white-color: hsl(var(--hue-color), 31%, 89%);
+  --input-color: hsl(var(--hue-color), 45%, 26%);
+}
+.formContainer.black {
+  --hue-color: 0;
+  --light-color: hsl(var(--hue-color), 0%, 58%);
+  --deep-color: hsl(var(--hue-color), 0%, 33%);
+  --cold-color: hsl(var(--hue-color), 0%, 26%);
+  --lighter-color: hsl(var(--hue-color), 0%, 50%);
+  --dark-color: hsl(var(--hue-color), 0%, 22%);
+  --darker-color: hsl(var(--hue-color), 0%, 10%);
+  --white-color: hsl(var(--hue-color), 0%, 80%);
+  --input-color: hsl(var(--hue-color), 0%, 26%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.formContainer {
+  background-color: var(--light-color);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile {
+    overflow-x: hidden;
+  }
+
+  .formWrapper {
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    .preview {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      i {
+        position: absolute;
+        top: 2px;
+        left: 80px;
+        color: rgb(255, 0, 0);
+        cursor: pointer;
+      }
+    }
+    .logo {
+      color: var(--deep-color);
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .title {
+      color: var(--deep-color);
+      font-size: 18px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 15px;
+        border: none;
+        border-bottom: 1px solid var(--light-color);
+        color: var(--input-color);
+        &:focus {
+          outline: 2px solid var(--input-color);
+        }
+        &::placeholder {
+          color: rgb(175, 175, 175);
+        }
+      }
+      button {
+        background-color: var(--cold-color);
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--lighter-color);
+        font-size: 14px;
+        cursor: pointer;
+        img {
+          width: 32px;
+        }
+      }
+    }
+    p {
+      color: var(--deep-color);
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+
+// ===========================================================================home
+.home {
+  background-color: var(--light-color);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 85%;
+    height: 95%;
+    display: flex;
+    overflow: hidden;
+    @include tablet {
+      width: 95%;
+    }
+    @include mobile {
+      width: 100%;
+      height: 95%;
+      border-radius: 10px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: var(--dark-color);
+      position: relative;
+      @include tablet {
+        flex: 0.5;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: var(--darker-color);
+        height: 50px;
+        padding: 10px;
+        justify-content: space-between;
+        color: var(--white-color);
+        .logo {
+          font-weight: bold;
+          font-size: 1.5rem;
+          @include tablet {
+            display: none;
+          }
+        }
+        .modal {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.377);
+          .modalBody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            background-color: white;
+            color: var(--dark-color);
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            padding: 10px;
+            position: relative;
+            @include tablet {
+              width: 270px;
+              height: 200px;
+            }
+            .modalTitle {
+              margin-top: 5px;
+              font-size: 1.5rem;
+              @include tablet {
+                font-size: 1rem;
+                margin-top: 10px;
+              }
+            }
+            .close {
+              position: absolute;
+              right: 12px;
+              top: 10px;
+              font-size: 1.3rem;
+              cursor: pointer;
+              color: red;
+              @include tablet {
+                right: 8px;
+                top: 6px;
+              }
+            }
+            .modalThemes {
+              margin-top: 50px;
+              margin-left: 30px;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(4, 1fr);
+              column-gap: 15px;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.4rem;
+              @include tablet {
+                font-size: 1rem;
+                margin-top: 30px;
+                margin-left: 0px;
+                column-gap: 0px;
+                row-gap: 5px;
+              }
+              input[type="radio"] {
+                position: absolute;
+                opacity: 0;
+              }
+              input[type="radio"] + label {
+                position: relative;
+                cursor: pointer;
+                padding: 0 0 0 35px;
+              }
+
+              input[type="radio"] + label:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 0;
+                width: 22px;
+                height: 22px;
+                border: 1px solid #cdd1da;
+                border-radius: 50%;
+                background: #fff;
+                @include tablet {
+                  top: 2px;
+                  left: 0;
+                  width: 18px;
+                  height: 18px;
+                }
+              }
+              input[type="radio"] + label:after {
+                content: "";
+                position: absolute;
+                top: 9px;
+                left: 12px;
+                width: 0px;
+                height: 0px;
+                border-radius: 50%;
+                background: var(--darker-color);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: 0.2s;
+              }
+
+              input[type="radio"]:checked + label:after {
+                opacity: 1;
+                top: 9px;
+                left: 4px;
+                width: 16px;
+                height: 16px;
+                @include tablet {
+                  width: 12px;
+                  height: 12px;
+                  top: 6px;
+                  left: 4px;
+                }
+              }
+            }
+          }
+        }
+        .info {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.377);
+          .infoBody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+            height: auto;
+            background-color: white;
+            color: var(--dark-color);
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            padding: 10px;
+            position: relative;
+            @include tablet {
+              width: 270px;
+              height: auto;
+            }
+            @include mobile {
+              width: 230px;
+              height: auto;
+            }
+            .infoTitle {
+              margin-top: 5px;
+              font-size: 1.5rem;
+              @include tablet {
+                font-size: 1rem;
+                margin-top: 10px;
+              }
+            }
+            .closeInfo {
+              position: absolute;
+              right: 12px;
+              top: 10px;
+              font-size: 1.3rem;
+              cursor: pointer;
+              color: red;
+              @include tablet {
+                right: 8px;
+                top: 6px;
+              }
+            }
+            .userInfo {
+              @include mobile {
+                font-size: 0.9rem;
+              }
+              div {
+                margin-bottom: 5px;
+              }
+              span {
+                font-weight: bold;
+              }
+              .preview {
+                margin: 0 auto;
+                width: 80px;
+                height: 80px;
+                position: relative;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 10px;
+                }
+                i {
+                  position: absolute;
+                  right: 3px;
+                  cursor: pointer;
+                  top: 0;
+                  color: red;
+                }
+              }
+              label {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                  height: 30px;
+                  margin-right: 10px;
+                }
+                cursor: pointer;
+              }
+
+              .userName {
+                border-radius: 10px;
+                margin-top: 15px;
+                border: 2px solid var(--light-color);
+                padding: 2px 5px;
+              }
+              .userEmail {
+                border: 2px solid var(--light-color);
+                border-radius: 10px;
+                padding: 2px 5px;
+              }
+              .userPhoto {
+                margin-top: 20px;
+                border: 2px solid var(--light-color);
+                border-radius: 10px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                  max-height: 200px;
+                  object-fit: cover;
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              .changeImg {
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                button {
+                  background-color: var(--deep-color);
+                  color: var(--white-color);
+                  font-size: 14px;
+                  border: none;
+                  padding: 5px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+        .user {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          cursor: pointer;
+
+          img {
+            background-color: var(--white-color);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .bottom {
+            display: flex;
+            column-gap: 20px;
+            i {
+              font-size: 1.3rem;
+              cursor: pointer;
+              padding: 2px;
+            }
+            @include tablet {
+              position: absolute;
+              bottom: 0px;
+              padding: 6px 10px 10px 10px;
+              left: 0px;
+              width: 100%;
+              -webkit-box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.2);
+              -moz-box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px -8px 8px 3px rgba(0, 0, 0, 0.2);
+            }
+            button {
+              background-color: var(--deep-color);
+              color: var(--white-color);
+              font-size: 13px;
+              border: none;
+              padding: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .search {
+        border-bottom: 1px solid gray;
+
+        .searchForm {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          button {
+            padding: 0;
+            border: none;
+            font: inherit;
+            color: inherit;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+          }
+          i {
+            color: white;
+            padding: 5px 10px;
+          }
+          input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+
+            &::placeholder {
+              color: lightgray;
+            }
+          }
+        }
+      }
+
+      .userChat {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--darker-color);
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .userChatInfo {
+          span {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          p {
+            margin: 0;
+            font-size: 14px;
+            color: lightgray;
+          }
+        }
+      }
+      .chats {
+        overflow-y: auto;
+        height: calc(100% - 160px);
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: var(--deep-color);
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--lighter-color);
+        }
+      }
+    }
+    .chat {
+      position: relative;
+      flex: 2;
+
+      .chatInfo {
+        height: 50px;
+        background-color: var(--deep-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        color: lightgray;
+        .burger {
+          display: none;
+          @include mobile {
+            display: inline-block;
+          }
+          cursor: pointer;
+          .bar1,
+          .bar2,
+          .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+          }
+        }
+        span {
+          @include mobile {
+            margin-left: 10px;
+            font-size: 20px;
+            position: relative;
+            bottom: 12px;
+          }
+        }
+
+        .chatIcons {
+          display: flex;
+          gap: 10px;
+
+          img {
+            height: 24px;
+            cursor: pointer;
+          }
+        }
+      }
+      .messages {
+        background-color: var(--white-color);
+        padding: 10px;
+        height: calc(100% - 160px);
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: var(--deep-color);
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--lighter-color);
+        }
+
+        .previewImg {
+          position: absolute;
+          left: 0px;
+          top: 70px;
+          width: 100%;
+          height: calc(100% - 140px);
+          background-color: rgba(0, 0, 0, 0.815);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: auto;
+            max-height: 85%;
+            object-fit: cover;
+            position: relative;
+            @include mobile {
+              max-width: 80%;
+              max-height: 80%;
+              object-fit: contain;
+            }
+          }
+        }
+        .message {
+          display: flex;
+          gap: 20px;
+          font-weight: 300;
+          margin-bottom: 20px;
+
+          .messageInfo {
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            span {
+              max-width: 27px;
+            }
+          }
+          .messageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+              background-color: white;
+              padding: 10px;
+              border-radius: 0px 10px 10px 10px;
+              max-width: max-content;
+            }
+            img {
+              width: 50%;
+              cursor: pointer;
+            }
+          }
+          &.owner {
+            flex-direction: row-reverse;
+            .messageContent {
+              align-items: flex-end;
+              p {
+                background-color: var(--lighter-color);
+                color: white;
+                border-radius: 10px 0px 10px 10px;
+              }
+            }
+          }
+        }
+      }
+      .inputBody {
+        position: relative;
+        .preview {
+          position: absolute;
+          bottom: 75px;
+          left: 5px;
+          width: 100px;
+          height: 100px;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          }
+          i {
+            position: absolute;
+            top: 2px;
+            left: 80px;
+            color: red;
+            cursor: pointer;
+          }
+        }
+        .input {
+          height: 50px;
+          background-color: white;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            color: var(--darker-color);
+            font-size: 18px;
+            @include mobile {
+              font-size: 16px;
+            }
+
+            &::placeholder {
+              color: lightgray;
+            }
+          }
+        }
+        .send {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .attach {
+            @include mobile {
+              display: none;
+            }
+          }
+          img {
+            height: 24px;
+            cursor: pointer;
+          }
+          button {
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            background-color: var(--lighter-color);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
